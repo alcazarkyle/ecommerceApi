@@ -3,11 +3,23 @@ package com.ws101.alcazar.ecommerceApi.model;
 public class Product {
 
     private Long id;
+
+    @NotBlank(message = "Name is required")
+    @Size(min = 2, message = "Name must be at least 2 characters")
     private String name;
+
+    @NotBlank(message = "Description is required")
     private String description;
+
+    @Positive(message = "Price must be greater than zero")
     private double price;
+
+    @NotBlank(message = "Category is required")
     private String category;
+
+    @PositiveOrZero(message = "Stock quantity cannot be negative")
     private int stockQuantity;
+
     private String imageUrl;
 
     // Default constructor (IMPORTANT for Spring)
@@ -27,7 +39,6 @@ public class Product {
     }
 
     // Getters and Setters (accessors & mutators)
-
     public Long getId() {
         return id;
     }
