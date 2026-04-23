@@ -87,3 +87,7 @@ Known Limitations
 • Uses in-memory storage (data resets when server stops).
 
 • No database connection yet.
+
+Contributors:
+Alcazar, Kyle D.
+Aliposa, Francis Jetan V.
