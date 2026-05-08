@@ -91,3 +91,45 @@ Known Limitations
 Contributors:
 Alcazar, Kyle D.
 Aliposa, Francis Jetan V.
+
+
+# E-Commerce API - Lab 8 Submission
+
+## Database Schema
+- *categories*: id (PK), name
+- *products*: id (PK), name, description, price, stockQuantity, imageUrl, category_id (FK)
+- *Relationship*: One-to-Many (1 Category → Many Products)
+  - Uses @OneToMany, @ManyToOne, CascadeType.ALL, FetchType.LAZY
+
+## API Endpoints
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | /api/products | Get all products |
+| GET | /api/products/{id} | Get single product by ID |
+| POST | /api/products | Add new product |
+| PUT | /api/products/{id} | Update product |
+| DELETE | /api/products/{id} | Delete product |
+| GET | /api/products/category/{name} | Filter by category |
+| GET | /api/products/price?min=X&max=Y | Filter by price range |
+
+## Screenshots
+1. *MySQL Workbench* – Shows populated categories and products tables
+2. *Browser Console* – Shows successful fetch response and no errors
+3. *Postman* – Verifies all endpoints work and data persists after restart
+(HI SIR, SORRY SIR WARY PO AK PAKA SS SA MGA  NEED IG SS DRI PO KASI NAGANA AK SCREENSHOT DIDI SA LAPTOP.)
+
+## Tech Stack
+- Spring Boot, Spring Data JPA / Hibernate
+- MySQL
+- HTML, CSS, JavaScript (Fetch API)
+- Gradle
+
+## Code Quality
+- All JPA entities have Javadoc comments
+- JavaScript functions include try/catch error handling with explanations
+
+## Git Workflow
+- Created branch: feat:db-integration
+- Committed changes at each task checkpoint
+- Merged feat:db-integration into main
+- Feature branch kept (not deleted as required)
